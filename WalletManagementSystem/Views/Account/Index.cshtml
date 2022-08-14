@@ -1,0 +1,43 @@
+﻿<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+                <img class="img" src="~/images/wallet.jpg" alt="Wallet" />
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img" src="~/images/payment.png" alt="Payment" />
+            </div>
+            <div class="col-md-6">
+                <p style="text-align:center">Instant Payments</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p style="text-align:center">Redeem points with every transfer</p>
+            </div>
+            <div class="col-md-6">
+                <img class="img" src="~/images/points.jpg" alt="Points" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img" src="~/images/transfer.jpg" alt="Transfer" />
+            </div>
+            <div class="col-md-6">
+                <p style="text-align:center">Easy and  hassle free transfer</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <partial name="Login" />
+        </div>
+        <h3 class="bg-primary">Not a part?? Please Sign UP Now </h3>
+        <div class="row">
+            <partial name="Register" />
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,25 @@
+﻿<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<div class="row">
+    <div class="col-md-6">
+        @*<partial name="AddCard" />*@
+        <div id="partialViewAdd" style="display:none"></div>
+
+    </div>
+    <div class="col-md-6">
+        @*<partial name="GetCard" />*@
+        <div id="partialViewGet" style="display:none"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+$(function () {
+    $( "#partialViewAdd" ).load("/Card/AddCard");
+    $("#partialViewAdd").show();
+
+    $( "#partialViewGet" ).load("/Card/GetCard" );
+    $( "#partialViewget" ).show();
+    }
+</script>

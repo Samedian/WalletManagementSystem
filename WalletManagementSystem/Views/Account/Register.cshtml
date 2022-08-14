@@ -1,0 +1,30 @@
+﻿@model WalletManagementEntity.User;
+
+<form asp-action="Register">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="UserId" />
+    <div class="form-group">
+        <input asp-for="UserName" placeholder="Enter your name" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="email" placeholder="Enter your email" asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="number" placeholder="Enter your phone number" asp-for="PhoneNo" class="form-control" />
+        <span asp-validation-for="PhoneNo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="password" asp-for="SecretPassword" placeholder="Enter your password" class="form-control" />
+        <span asp-validation-for="SecretPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="password" asp-for="CompareSecretPassword" placeholder="Confirm your secret password" class="form-control" />
+        <span asp-validation-for="CompareSecretPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Register" />
+    </div>
+</form>

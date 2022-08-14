@@ -1,0 +1,28 @@
+﻿@model WalletManagementEntity.Card;
+
+<form asp-action="AddCard">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="CardId" />
+    <div class="form-group">
+        <label asp-for="CardNumber"></label>
+        <input asp-for="CardNumber" class="form-control" />
+        <span asp-validation-for="CardNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CardOwnerName"></label>
+        <input asp-for="CardOwnerName" class="form-control" />
+        <span asp-validation-for="CardOwnerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <p>Enter Date </p>
+        <input type="number" asp-for="Month" class="form-control" />
+        <span asp-validation-for="Month" class="text-danger"></span>
+        <p>/</p>
+        <input type="number" asp-for="Year" class="form-control" />
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Add Card" />
+    </div>
+</form>

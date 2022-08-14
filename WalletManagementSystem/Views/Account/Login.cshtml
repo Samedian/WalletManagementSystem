@@ -1,0 +1,19 @@
+﻿@model WalletManagementEntity.User
+
+<form asp-action="Login">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="row container">
+        <div class="col-md-5 form-group" >
+            <input asp-for="Email" placeholder="Enter Email Address" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="col-md-5 form-group">
+            <input type="password" asp-for="SecretPassword" placeholder="Enter Password" class="form-control" />
+            <span asp-validation-for="SecretPassword" class="text-danger"></span>
+        </div>
+        <div class="col-md-2 form-group">
+            <input class="btn btn-primary" type="submit" value="Login" />
+        </div>
+    </div>
+</form>
